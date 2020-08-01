@@ -2,6 +2,11 @@
 label: Page
 hide_body: false
 fields:
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: image
 - name: title
   type: text
   config:
@@ -12,5 +17,14 @@ fields:
   config:
     required: false
   label: description
+- name: story
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Story
 pages:
 - docs/about.md
